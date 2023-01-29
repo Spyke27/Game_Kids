@@ -56,7 +56,6 @@ p {
 .item {
     width: 100px;
     height: 100px;
-    color: #FFF;
     font-size: 30px;
     display: flex;
     justify-content: center;
@@ -77,6 +76,9 @@ p {
     justify-content: space-around;
     align-items: center;
     border: 2px solid #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
 }
 .areas.correct .area {
     border: 2px solid #00FF00;
@@ -88,9 +90,11 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #222;
 }
 .hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    border-color: rgb(167, 167, 6);
+    color:  rgb(167, 167, 6);
 }
 footer {
     margin-top: 20px;
