@@ -31,17 +31,17 @@ function dragLeave(e){
 }
 
 function drop(e){
- e.currentTarget.classList.remove("hover");
+const box = e.currentTarget;
+box.classList.remove("hover");
 
  const dragItem = document.querySelector(".item.dragging");
  const dragName = dragItem.getAttribute('data-name')
- const dropName = e.currentTarget.getAttribute('data-name')
+ const dropName = box.getAttribute('data-name')
 
 if(dragName === dropName){
+    box.innerHTML = "";
 
-    
-
-    e.currentTarget.innerHTML = "";
+    box.appendChild(dragItem);
 }
 
 }
