@@ -44,7 +44,6 @@ box.classList.remove("hover");
  const dropName = box.getAttribute('data-name')
  const itens = document.querySelectorAll(".area")
  let contMath = 0
- let countItens = itens.length/2
 
 if(dragName === dropName){
     box.innerHTML = "";
@@ -53,25 +52,26 @@ if(dragName === dropName){
 
     box.style.borderColor = "green";
 
-    itens.forEach(item => {
+     itens.forEach(item => {
         if(item.classList.contains("match")){
             contMath++;
         }
-    })
+    }) 
 }
 
-    if(contMath == countItens){
+switch (contMath){
+    case 6:
         levelOne.style.display = "none";
         levelTwo.style.display = "flex";
+    break;
 
-        nvl++
-    }
-    if( nvl == 2){
+    case 12:
         levelTwo.style.display = "none";
-
         endGame.style.display = "flex";
-    }
-}
+    break;
+}}
+
+
 function reset(){
     location.reload();
 }

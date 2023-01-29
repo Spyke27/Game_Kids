@@ -8,7 +8,7 @@
     display: none;
 }
 .nvl{
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -103,7 +103,7 @@ footer {
     font-size: 13px;
 }
 .endGame{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
