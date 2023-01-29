@@ -1,3 +1,6 @@
+const levelOne = document.querySelector(".one")
+const levelTwo = document.querySelector(".nvl.two")
+
 // Event item
 document.querySelectorAll(".item").forEach(item => {
     item.addEventListener('dragstart', dragStart);
@@ -37,11 +40,26 @@ box.classList.remove("hover");
  const dragItem = document.querySelector(".item.dragging");
  const dragName = dragItem.getAttribute('data-name')
  const dropName = box.getAttribute('data-name')
+ const itens = document.querySelectorAll(".area")
+ let contMath = 0
+ let countItens = itens.length/2
 
 if(dragName === dropName){
     box.innerHTML = "";
-
     box.appendChild(dragItem);
+    box.classList.add("match");
+
+    box.style.borderColor = "green";
+
+    itens.forEach(item => {
+        if(item.classList.contains("match")){
+            contMath++;
+        }
+    })
 }
 
+    if(contMath == countItens){
+        levelOne.style.display = "none";
+        levelTwo.style.display = "flex";
+    }
 }
