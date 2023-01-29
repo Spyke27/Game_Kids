@@ -66,7 +66,7 @@ if(dragName === dropName){
 
         nvl++
     }
-    if(nvl == 2){
+    if( nvl == 2){
         levelTwo.style.display = "none";
 
         endGame.style.display = "flex";
