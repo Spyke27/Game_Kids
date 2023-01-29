@@ -1,5 +1,7 @@
 const levelOne = document.querySelector(".one")
 const levelTwo = document.querySelector(".nvl.two")
+const endGame = document.querySelector(".endGame")
+let nvl = 0
 
 // Event item
 document.querySelectorAll(".item").forEach(item => {
@@ -61,5 +63,15 @@ if(dragName === dropName){
     if(contMath == countItens){
         levelOne.style.display = "none";
         levelTwo.style.display = "flex";
+
+        nvl++
     }
+    if(nvl == 2){
+        levelTwo.style.display = "none";
+
+        endGame.style.display = "flex";
+    }
+}
+function reset(){
+    location.reload();
 }

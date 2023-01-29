@@ -18,6 +18,7 @@ body {
     display: flex;
     min-height: 100vh;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     background-color: #ccc;
     font-family: Arial, Helvetica, sans-serif;
@@ -100,4 +101,32 @@ footer {
     margin-top: 20px;
     color: #FFF;
     font-size: 13px;
+}
+.endGame{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(66, 108, 243);
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.winner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.endGame h2{
+    color: #e3e3e3;
+    font-size: 22px;
+}
+.endGame h1{
+    color: #e3e3e3;
+    margin-bottom: 20px;
+}
+.endGame i{
+    font-size: 60px;
+    color: gold;
 }
